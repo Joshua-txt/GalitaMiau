@@ -1,0 +1,482 @@
+/* =========================================================
+   HEADER GENERAL (APLICA A TODAS LAS PÁGINAS)
+   ========================================================= */
+   
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 25px 3px;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  border-bottom: 2px solid #ddd;
+}
+
+.LOGO {
+  position: fixed;
+  top: 5px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.LOGO img {
+  width: 80px;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+/* =========================================================
+   RESPONSIVE — CABECERA (MÓVIL)
+   ========================================================= */
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1050;
+  }
+
+
+  #menu-toggle:checked~.nav {
+    display: flex;
+  }
+
+  .header {
+    justify-content: flex-start;
+    padding-left: 90px;
+  }
+
+  .LOGO img {
+    width: 70px;
+  }
+
+  body {
+    padding-top: 100px;
+  }
+}
+
+
+#menu-toggle {
+  display: none;
+}
+
+/* =========================================================
+   TIPOGRAFÍA GENERAL
+   ========================================================= */
+
+body {
+  background-color: #fce4ec;
+  padding-top: 140px;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-family: "Story Script", sans-serif;
+  font-size: 3rem;
+}
+
+h2,
+h3 {
+  font-family: 'Catamaran', sans-serif;
+}
+
+/* =========================================================
+   HOME — index.html
+   ========================================================= */
+
+.CASA {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.projects {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.extra {
+  text-align: center;
+  padding: 40px;
+}
+
+.equipo-flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.equipo-flex img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   FORMULARIO — contacto.html
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.contact {
+  max-width: 600px;
+  margin: 70px auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.contact-form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  background: #fafafa;
+  font-size: 1rem;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff7ba3;
+  background: #fff;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #ff7ba3;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #ff5c8c;
+  transform: translateY(-2px);
+}
+
+.contact-form button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 10px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact h1 {
+    font-size: 2rem;
+  }
+}
+
+/* =========================================================
+   FOOTER (TODAS LAS PÁGINAS)
+   ========================================================= */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* =========================================================
+   RESPONSIVE EXTRA — AJUSTES FINALES
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 10px 10px;
+  }
+
+  body {
+    padding-top: 50px;
+  }
+}
+
+/* =========================================================
+   QUIÉNES SOMOS (quienes.html)
+   ========================================================= */
+
+.BaulGalita {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GalitaGPT {
+  border-radius: 50%;
+  width: 160px;
+  box-shadow: 0 0 10px 15px rgba(255, 255, 255, 10.5);
+}
+
+.quienes-mision {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+}
+
+.quienes-mision .columna {
+  width: 50%;
+}
+
+.quienes-mision h1,
+.quienes-mision h2 {
+  margin-bottom: 15px;
+}
+
+.quienes-mision p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   GALERÍA DEL EQUIPO (equipo-galeria)
+   ========================================================= */
+
+.equipo-galeria {
+  text-align: center;
+  padding: 40px;
+}
+
+.equipo-galeria .galeria {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.equipo-galeria img {
+  width: 180px;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   RESPONSIVO QUIÉNES SOMOS / GALERÍA
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .quienes-mision {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    margin-top: -35px;
+  }
+
+  .quienes-mision .columna {
+    width: 100%;
+  }
+
+  .equipo-galeria .galeria {
+    flex-direction: column;
+  }
+
+  .equipo-galeria img {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+/* =========================================================
+   EFECTOS ANIMACIÓN CON MOUSE (equipo-flex y equipo-galeria)
+   ========================================================= */
+
+.equipo-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.equipo-flex img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.img-container {
+  position: relative;
+  overflow: visible;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .equipo-flex:hover img {
+    filter: blur(3px) brightness(0.6);
+  }
+
+  .equipo-flex img:hover {
+    filter: none !important;
+    transform: scale(1.8);
+    z-index: 10;
+    position: relative;
+  }
+
+  .equipo-galeria .galeria:hover figure img {
+    filter: blur(3px) brightness(0.6);
+  }
+
+  .equipo-galeria figure:hover img {
+    filter: none !important;
+    transform: scale(1.8);
+    z-index: 10;
+    position: relative;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .equipo-flex img {
+    width: 45%;
+    max-width: 170px;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .equipo-flex {
+    gap: 10px;
+  }
+
+  .equipo-galeria img {
+    filter: none !important;
+    transform: none !important;
+  }
+}
+
+.equipo-galeria .galeria {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.equipo-galeria figure {
+  text-align: center;
+  position: relative;
+}
+
+.equipo-galeria img {
+  width: 220px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}

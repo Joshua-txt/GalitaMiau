@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - GalitaMiau</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="GatitaBlur">
+
+    <header class="header">
+        <div class="LOGO">
+            <a href="./index.html" class="LOGO">
+                <img src="./assets/img/logoGalita2.png" alt="logoGalitaMiau" width="100px" />
+            </a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="quienes.html">Quiénes Somos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+
+    <section class="contact">
+        <h1>Contacto</h1>
+        <form action="https://aterbonus.dev/api/toys/forms" method="POST" class="contact-form">
+
+
+            <label>Nombre</label>
+            <input type="text" name="name" required maxlength="200">
+
+
+            <label>Email</label>
+            <input type="email" name="email" required maxlength="200">
+
+
+            <label>Asunto</label>
+            <input type="text" name="subject" required maxlength="200">
+
+
+            <label>Contenido</label>
+            <textarea name="content" required maxlength="1000"></textarea>
+
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <p>© 2025 GalitaMiau</p>
+    </footer>
+
+
+</body>
+
+</html>
